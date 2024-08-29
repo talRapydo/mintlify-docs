@@ -1,0 +1,71 @@
+{
+	"$schema": "https://mintlify.com/schema.json",
+	"name": "Rapydo Documentation",
+	"logo": {
+		"dark": "/logo/logo.png",
+		"light": "/logo/light.svg"
+	},
+	"favicon": "/favicon.svg",
+	"colors": {
+		"primary": "#0D9373",
+		"light": "#07C983",
+		"dark": "#0D9373",
+		"anchors": {
+			"from": "#0D9373",
+			"to": "#07C983"
+		}
+	},
+	"topbarLinks": [
+		{
+			"name": "Support",
+			"url": "mailto:hi@mintlify.com"
+		}
+	],
+	"topbarCtaButton": {
+		"name": "Dashboard",
+		"url": "https://dashboard.mintlify.com"
+	},
+	"tabs": [
+		{
+			"name": "API Reference",
+			"url": "api-reference"
+		}
+	],
+	"navigation": [
+		{
+			"group": "Get Started",
+			"pages": [
+				"introduction",
+				{
+					"group": "Automation",
+					"pages": [
+						"automation/introduction",
+						"automation/defining_rules",
+						"automation/scout_triggers_and_actions",
+						"automation/cortex_triggers_and_actions",
+						"automation/alerts_triggers_and_actions",
+						"automation/cache_triggers_and_actions"
+					]
+				}
+			]
+		},
+		{
+			"group": "Essentials",
+			"pages": [
+				"essentials/markdown",
+				"essentials/code",
+				"essentials/images",
+				"essentials/settings",
+				"essentials/navigation",
+				"essentials/reusable-snippets"
+			]
+		},
+		{
+			"group": "API Documentation",
+			"pages": ["api-reference/introduction"]
+		}
+	],
+	"footerSocials": {
+		"linkedin": "https://www.linkedin.com/company/83025951"
+	}
+}
