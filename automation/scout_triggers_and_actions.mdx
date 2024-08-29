@@ -1,0 +1,49 @@
+**Triggers** - events that are defined by the user, for example: The CPU Utilization of the database machine is over 90%.
+
+**Actions** - the measures that the user defines for the system to take if a certain triggers (conditions) are met.
+
+**Select Database(s)** - allows you to choose one or more database instances to apply the rule to.
+
+### Trigger Types
+
+* **Query pattern** - the action(s) will be triggered when the current query matches the given query pattern.
+* **Query Duration** - the action(s) will be triggered when the current query duration is greater than the specified duration.
+* **User(s)** - the action(s) will be triggered when a user or users are connecting to the database.
+* **IP(s)** - The action(s) will be triggered when a host with a specific IP address connects to the database.
+* **Database Name** - The action(s) will be triggered when a certain database schema is accessed by a user.
+* **Connection Utilization** - The action(s) will be triggered when the connection utilization to a certain Database(s) exceeds a certain percentage.
+* **Custom Script** - The action(s) will be triggered when a custom script, provided by the user, runs and finds processes which will be killed by the system.
+
+### Trigger Operator Types
+
+* **In** - this operator is relevant to the Trigger types: User(s) and IP(s), and allows us to define a few IP addresses or Users that will trigger the action(s) defined.
+* **Not In** - similar to the operator In, but it is used for triggering an action when the IPs or Users are not included in the given list.
+* **Like** - this operator is relevant to the Trigger types: Query Pattern, and it allows us to define a pattern that includes a few queries that will trigger the action(s) defined.
+* **Not Like** - similar to the operator Like, but it is used for triggering an action when the given query pattern does not include the current query.
+* **Is Greater Than** - this operator is relevant to the Trigger type Query Duration.
+
+### Trigger Values
+
+* **Query pattern** - the string of the query pattern.
+* **Query Duration** - the time above which the action will be triggered.
+* **User(s)** - a comma separated list of a User(s).
+* **IP(s)** - a comma separated list of IP(s).
+* **Database Name** - a comma separated list of name(s) of the relevant database schema(s).
+* **Connection Utilization** - a percentage value above which the action(s) will be triggered.
+* **Custom Script** - the relevant script.
+
+### Action Types
+
+* **No Action** - No action will be taken. Useful when only a notification is wanted.
+* **Kill Connection** - Kill the connections which were defined, like a query pattern.
+* **Rate Limit** - Limit the rate of a certain connection that match the trigger value.
+* **Lock** - Lock a certain User(s) or IP(s) etc' out of the system.
+* **Kill idle connections** - All idle connection will be killed when the trigger value is matched.
+
+### Action Values
+
+* **No Action** - No value.
+* **Kill Connection** - No value.
+* **Rate Limit** - Limit the resources of the current request request to a defined based on the trigger type and value. All requests above the limit will be ignored.
+* **Lock** - No value.
+* **Kill idle connections** - No value.

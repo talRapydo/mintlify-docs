@@ -1,0 +1,42 @@
+**Triggers** - events that are defined by the user, for example: The CPU Utilization of the database machine is over 90%.
+
+**Actions** - the measures that the user defines for the system to take if a certain triggers (conditions) are met.
+
+### Trigger Types
+
+* **Query pattern** - the action(s) will be triggered when the current query matches the given query pattern.
+* **Query Duration** - the action(s) will be triggered when the current query duration is greater than the specified duration.
+* **User(s)** - the action(s) will be triggered when a user or users are connecting to the database.
+* **IP(s)** - The action(s) will be triggered when a host with a specific IP address connects to the database.
+* **Time** - The action(s) will be triggered in a specific time frame only. 
+
+### Trigger Operator Types
+
+* **In** - this operator is relevant to the Trigger types: User(s) and IP(s), and allows us to define a few IP addresses or Users that will trigger the action(s) defined.
+* **Not In** - similar to the operator In but it is used for triggering an action when the IPs or Users are not included in the given list.
+* **Like** - this operator is relevant to the Trigger types: Query Pattern, and it allows us to define a pattern that includes a few queries that will trigger the action(s) defined.
+* **Not Like** - similar to the operator Like but it is used for triggering an action when the given query pattern does not include the current query.
+* **Is Greater Than** - this operator is relevant to the Trigger type Query Duration.
+
+### Trigger Values
+
+* **Query pattern** - the string of the query pattern.
+* **Query Duration** - the time above which the action will be triggered.
+* **User(s)** - a comma separated list of a User(s).
+* **IP(s)** - a comma separated list of a IP(s).
+* **Time** - start and end times of the trigger, with frequency options: daily, weekly, or monthly. The weekly option lets us choose specific days for the trigger, and the monthly option lets us select a specific day of the month.
+
+### Action Types
+
+* **Block** - Blocks the current request based on the trigger type and value. 
+* **Throttle** - Throttle resources of the current request to a defined based on the trigger type and value.
+* **Rate Limit** - Limit the resources of the current request request to a defined based on the trigger type and value.
+* **Rewrite** - Change the current query request to a different request based on the action value.
+
+### Action Values
+
+* **Block** - No value. 
+* **Throttle** - Limit the resources of the current request request to a defined based on the trigger type and value. All requests above the limit will be queued.
+* **Rate Limit** - Limit the resources of the current request request to a defined based on the trigger type and value. All requests above the limit will be ignored.
+* **Rewrite** - The query string that we replace the original query with.
+

@@ -1,0 +1,46 @@
+**Triggers** - events that are defined by the user, for example: The CPU Utilization of the database machine is over 90%.
+
+**Actions** - the measures that the user defines for the system to take if a certain triggers (conditions) are met.
+
+**Select Database(s)** - allows you to choose one or more database instances to apply the rule to.
+
+### Trigger Types
+
+* **CPU Utilization** - Database instance current CPU level.
+* **Free Memory** - Database instance current free memory amount.
+* **Max Query Duration** - The maximum amount of time a query can run without generating an alert.
+* **DB Count** - Change in the number of database schemas.
+* **Users Count** - Change in the number of users in the database.
+* **Hosts Count** - Change in the number of hosts in the database.
+* **Waits Count** - Change in the number of waits in the database.
+* **Connections Count**- Change in the number of user connections in the database.
+* **Read IOPS** - The maximum amount of read IOPS without generating an alert.
+* **Write IOPS** - The maximum amount of write IOPS without generating an alert.
+
+### Trigger Operator Types
+
+* **Greater Than**
+* **Greater Than Or Equal**
+* **Less Than**
+* **Greater Than Or Equal**
+
+###  Trigger Values
+
+* **CPU Utilization** - The value in percentage.
+* **Free Memory** - The value in Megabytes.
+* **Max Query Duration** - The value in seconds.
+* **DB Count** - Unitless number.
+* **Users Count** - Unitless number.
+* **Hosts Count** - Unitless number.
+* **Waits Count** - Unitless number.
+* **Connections Count** - Unitless number.
+* **Read IOPS** - Unitless number.
+* **Write IOPS** - Unitless number.
+
+###  Action Type
+
+* **Email**
+
+###  Action Values
+
+* **Recipients** - a list of Email(s) address(es) to send the alert to.

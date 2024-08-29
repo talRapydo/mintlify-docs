@@ -1,0 +1,30 @@
+Triggers are events that are defiend by the user, for example: The CPU Utilization of the database machine is over 90%.
+
+Actions are the measures that the user defines for the system to take if a certain triggers (conditions) are met.  
+
+### Rapydo supports four main categories of triggers
+ 
+#### Applicative Database Usage Triggers
+
+These are based on changes in database-specific metrics, including:
+
+* Query pattern and Query Duration
+* Users and IPs
+* Database name and Connection utilization
+* Time based triggers
+
+#### Machine Metric Triggers
+
+These are derived from changes in system-level metrics, such as:
+
+* CPU Utilization
+* Free Memory
+* Max Query Duration
+* Read and Write IOPS
+* Counts: users, hosts, waits, connections, DBs
+
+#### Cache Rules 
+These rules are triggered by a query or table which are predefined in the triggers and can automate the caching or the pass-through of queries which fit a certain query pattern.
+
+#### Rules triggered by an execution of a user-defined rule 
+These are alerts which are triggered by the execution of other user-defined rules, allowing for complex, multi-step automations.
